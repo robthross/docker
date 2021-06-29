@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            label 'docker-image'
+            label 'dockerps'
         }
     }
     stages {
