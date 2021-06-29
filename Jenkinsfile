@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Primeiro Teste'
+                sh("docker build .")
             }
         }
         stage('Testando') {
