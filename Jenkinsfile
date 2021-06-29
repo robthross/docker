@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Realizando o Build da Imagem'
-                docker build . --name python-test --tag python:1.0.0
+                docker build . 
 
             }
         }
