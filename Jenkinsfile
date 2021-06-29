@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                docker build .
+                echo 'Primeiro Teste'
             }
         }
         stage('Testando') {
