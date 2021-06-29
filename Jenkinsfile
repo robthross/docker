@@ -5,15 +5,16 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('Startando o Docker') {
             steps {
-                echo 'Primeiro Teste'
-                sh("docker build .")
+                echo 'Iniciando o Docker'
+                sh("service docker start")
             }
         }
-        stage('Testando') {
+        stage('Build da Imagem') {
             steps {
                 echo 'Passando'
+                sh('docker build .')
             }
         }
         stage('Fazendo Push da Imagem') {
