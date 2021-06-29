@@ -7,8 +7,7 @@ pipeline {
     stages {
         stage('Startando o Docker') {
             steps {
-                echo 'Iniciando o Docker'
-                sh("dockerd")
+                dockerd
             }
         }
         stage('Build da Imagem') {
