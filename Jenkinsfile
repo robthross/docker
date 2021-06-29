@@ -3,6 +3,7 @@ pipeline {
         kubernetes {
             label 'docker-image'
         }
+    }
     stages {
         stage('Build') {
             steps {
