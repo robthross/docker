@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Realizando o Build da Imagem'
+                docker build .
             }
         }
         stage('Testando') {
@@ -20,7 +20,7 @@ pipeline {
                 echo 'Passando'
             }
         }
-        stage {
+        stage('Testando o Push') {
             steps {
                 echo 'Passando'
             }
