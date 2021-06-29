@@ -3,12 +3,6 @@ podTemplate(containers: [
   ]) {
 
     node(POD_LABEL) {
-        stage {
-            steps {
-                echo "Vefificando arquivos"
-                sh 'ls -lha'
-            }
-        }
         stage('Get a Python project') {
             git url: 'https://github.com/robthross/docker.git'
             container('docker') {
@@ -19,6 +13,5 @@ podTemplate(containers: [
                 }
             }
         }
-
     }
 }
