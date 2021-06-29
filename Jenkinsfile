@@ -8,8 +8,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Realizando o Build da Imagem'
-                docker build . 
-
             }
         }
         stage('Testando') {
