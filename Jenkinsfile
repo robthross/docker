@@ -8,7 +8,7 @@ pipeline {
         stage('Startando o Docker') {
             steps {
                 echo 'Iniciando o Docker'
-                sh("service docker start")
+                sh("systemctl start docker")
             }
         }
         stage('Build da Imagem') {
