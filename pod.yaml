@@ -12,11 +12,11 @@ spec:
       image: jenkins/jnlp-slave
       resources:
         limits:
-          cpu: 1
-          memory: 1Gi
+          cpu: 0.5
+          memory: 800M
         requests:
-          cpu: 1
-          memory: 1Gi
+          cpu: 0.5
+          memory: 800M
       imagePullPolicy: Always
       env:
       - name: POD_IP
