@@ -1,9 +1,14 @@
 pipeline {
-    node {
-  git 'https://github.com/robthross/docker.git' // checks out Dockerfile & Makefile
-  def myEnv = docker.build 'robthross:python'
-  myEnv.inside {
-    sh 'make test'
+    agent {
+        kubernetes {
+            label 'dockerps'
+        }
+    }
+    stages {
+        stage('Build Image') {
+            steps {
+                sh "docker build . -t robthross/python:v1"
+            }
         }
     }
 }
