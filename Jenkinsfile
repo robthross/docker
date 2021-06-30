@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            image 'jenkins/jnlp-agent-docker:latest'
+            label 'jnlp'
         }
     }
     stages {
