@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes {
-            label 'dockerps'
+            label 'docker-dind'
         }
     }
     stages {
