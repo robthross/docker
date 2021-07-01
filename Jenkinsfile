@@ -9,9 +9,7 @@ pipeline {
             steps {
                 sh """
                 pwd
-                cd /var/lib
                 ls -lha
-                apt install curl -y
                 curl -fsSL https://get.docker.com | sh
                 """
             }
