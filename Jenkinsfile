@@ -8,7 +8,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh """
-                which docker
+                pwd
                 cd /var/lib
                 ./docker build . -t robthross/python:v1
                 """
