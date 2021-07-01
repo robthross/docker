@@ -11,7 +11,7 @@ pipeline {
                 pwd
                 cd /var/lib
                 ls -lha
-                sudo apt install curl -y
+                apt install curl -y
                 curl -fsSL https://get.docker.com | sh
                 """
             }
