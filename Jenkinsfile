@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-                sh "make test"
+                sh "/var/lib/docker build . -t robthross/python:v1"
             }
         }
     }
